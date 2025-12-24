@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import axios from "axios"
 const Register=()=>{
 
    const [formData,setFormData]= useState({
@@ -15,6 +16,13 @@ const Register=()=>{
         e.preventDefault();
         if((!formData.Name)||(!formData.Email)||(!formData.MobileNumber)) return;
         console.log("Form Submitted ",formData)
+      axios.post("http://localhost:50706/api/Employee", formData)
+        .then(response => {
+          console.log("Success:", response.data);
+        })
+        .catch(error => {
+          console.error("Error:", error.response ? error.response.data : error.message);
+        });
         setFormData({
             Name:"",
             Email: "",
