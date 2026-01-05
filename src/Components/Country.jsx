@@ -21,14 +21,11 @@ const countries = [
 ];
 
 const [countrydata, setCountrydata]= useState("");
-const handleChange=(event)=>{
-    setCountrydata(event.target.value)
-    console.log(typeof(countries[0].cities))
-}
+
 
   return (
     <>
-    <select onChange={handleChange}>
+    <select onChange={(event) => setCountrydata(event.target.value)}>
         {countries.map((country,index)=>{
             return <option key={index} value={index}>{country.name}</option>
         })}

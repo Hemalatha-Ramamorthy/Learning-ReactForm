@@ -6,6 +6,7 @@ import './css/App.css';
 import Home from './Home'
 import Country from './Components/Country';
 import ListTask from './Components/ListTask';
+import Learning from './Components/Learning'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
           <Link to="/Register">Register</Link>
           <Link to="/NewRegister">New Register</Link>
           <Link to="/ListTask">ListTask</Link>
+          <Link to="/Learning">Learning</Link>
         </div>
       </nav>
 
@@ -26,6 +28,7 @@ function App() {
         <Route path="/NewRegister" element={<UseActionRegister />} />
          <Route path="/Country" element={<Country />} />
          <Route path="/ListTask" element={<ListTask />} />
+         <Route path="/Learning" element={<Learning/>}/>
       </Routes>
     </>
   );
