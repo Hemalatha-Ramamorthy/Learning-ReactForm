@@ -14,3 +14,11 @@
     font-weight: bold;
      padding: 0px 6pc;
 }
+
+.errors{
+  border:1px solid red !important;
+}
+
+.error-text{
+  color: red;
+}

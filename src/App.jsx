@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Form, Link, Route, Routes } from 'react-router-dom';
 import Register from './Components/Register';
 import UseActionRegister from './Components/UseActionRegister';
 import './css/App.css';
@@ -7,6 +7,7 @@ import Home from './Home'
 import Country from './Components/Country';
 import ListTask from './Components/ListTask';
 import Learning from './Components/Learning'
+import LearnForm from './Components/LearnForm'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,6 +30,7 @@ function App() {
          <Route path="/Country" element={<Country />} />
          <Route path="/ListTask" element={<ListTask />} />
          <Route path="/Learning" element={<Learning/>}/>
+          <Route path="/LearnForm" element={<LearnForm/>}/>
       </Routes>
     </>
   );
